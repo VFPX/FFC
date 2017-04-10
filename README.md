@@ -14,7 +14,6 @@ The Visual FoxPro visual class (.vcx) libraries located in the Visual FoxPro FFC
 
 To use:
 
-    ```foxpro
     oMM = CREATEOBJECT("MailMerge")
         && create object
     oMM.cAppTitle = "My Application"
@@ -40,11 +39,9 @@ To use:
         && fill in array of field names to be used
     oMM.Merge
         && do the merge
-    ```
 
 In the following example, the sample data table customer is used to create a new mailmerge form letter document in MS-Word (the defaults), using the customer.company and customer.city fields:
 
-    ```foxpro
     ox = newobject("mailmerge",HOME()+"FFC\mailmrge.vcx")
     use c:\vfp\samples\data\customer
     set database to testdata
@@ -55,29 +52,23 @@ In the following example, the sample data table customer is used to create a new
     ox.aAutoFields[1] = "company"
     ox.aAutoFields[2] = "city"
     ox.makeoutput
-    ```
 
 To add a custom mailmerge function:
 
-    ```foxpro
     oMM = CREATE("MailMerge")
     DIMENSION oMM.aWPMrg[ALEN(oMM.aWPMrg,1) + 1]
     oMM.aWPMrg[ALEN(oMM.aWPMrg,1)] = "MyMailMergeFunction"
     oMM.nWordProc = ALEN(oMM.aWPMrg,1)
-    ```
 
 or just replace an existing one:
 
-    ```foxpro
     oMM.aWPMrg[2] = "MyMailMergeFunction"
     oMM.nWordProc = 2
-    ```
 
 ## PivotTable Class notes
 
 To use:
 
-    ```foxpro
     USE (HOME() + "samples\data\orders")
     SET DATABASE TO testdata
     DIMENSION aflds[4,1]
@@ -102,13 +93,11 @@ To use:
     =ACOPY(aFList, oPiv.aFldList)
     
     oPiv.MakeOutput()
-    ```
 
 ## Graph Automation Class Notes
 
 To use:
 
-    ```foxpro
     CLOSE DATA ALL
     USE D:\TEMP2\OFFICES.DBF
         && a Fox 2.6 sample table
@@ -143,4 +132,3 @@ To use:
     USE D:\TEMP2\VFPGRAPH.DBF
     GO BOTTOM
     MODIFY GENERAL vfpgraph.olegraph NOWAIT
-    ```
