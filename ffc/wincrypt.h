@@ -262,7 +262,7 @@
 #DEFINE dcgetcryptsessionkeyhandleERR_LOC	" must be called with parameter picType = 'B' or 'S' or 'BR' or 'SR'"
 #DEFINE	dcSignFileParamter_ERR_LOC	'Must Enter a Signature Reference, a Decrypted File Name, and'+chr(13)+chr(10)+'a password'+chr(13)+chr(10)+'as a parameter to This Function'
 #DEFINE dcSignFileDecryptedFile_ERR_LOC	'Decrypted File Could not be Opened'
-#DEFINE	dcSignFileHashObjcet_ERR_LOC	'Error Creating Hash Object for Signature'
+#DEFINE	dcSignFileHashObject_ERR_LOC	'Error Creating Hash Object for Signature'
 #DEFINE	dcSignFileHashing_ERR_LOC	'Error Hashing Data'
 #DEFINE dcS	'S'
 #DEFINE dcSR	'SR'
